@@ -92,10 +92,9 @@ class BookFragment : Fragment() {
                 bundle.putInt("image", bookListAdapter.bookList[position].image)
                 bundle.putString("bookCount", bookListAdapter.bookList[position].bookContent)
                 bundle.putString("bookDate", bookListAdapter.bookList[position].bookDate)
-                Log.d("test", "${bookListAdapter.bookList[position].bookName} ${bookListAdapter.bookList[position].bookDate}")
                 val noteFragment = NoteFragment()
                 noteFragment.arguments = bundle
-                requireActivity().supportFragmentManager.beginTransaction().replace(R.id.main_fragment_container_view,NoteFragment()).commitNow()
+                requireActivity().supportFragmentManager.beginTransaction().replace(R.id.main_fragment_container_view,noteFragment).commitNow()
             }
         })
     }
