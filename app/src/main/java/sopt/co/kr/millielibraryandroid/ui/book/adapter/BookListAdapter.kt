@@ -1,6 +1,7 @@
 package sopt.co.kr.millielibraryandroid.ui.book.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import sopt.co.kr.millielibraryandroid.api.data.BookInfo
@@ -9,6 +10,16 @@ import sopt.co.kr.millielibraryandroid.databinding.ItemBookListBinding
 class BookListAdapter : RecyclerView.Adapter<BookListAdapter.BookListViewHolder>() {
 
     val bookList = mutableListOf<BookInfo>()
+
+    interface ItemClickListener {
+        fun onClick(view: View, position: Int)
+    }
+
+    private lateinit var itemClickListener: ItemClickListener
+
+    fun setItemClickListener(itemClickListener: ItemClickListener) {
+        this.itemClickListener = itemClickListener
+    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -20,6 +31,10 @@ class BookListAdapter : RecyclerView.Adapter<BookListAdapter.BookListViewHolder>
 
     override fun onBindViewHolder(holder: BookListAdapter.BookListViewHolder, position: Int) {
         holder.onBind(bookList[position])
+        holder.itemView.setOnClickListener{
+            itemClickListener.onClick(it, position)
+
+        }
     }
 
     override fun getItemCount(): Int = bookList.size

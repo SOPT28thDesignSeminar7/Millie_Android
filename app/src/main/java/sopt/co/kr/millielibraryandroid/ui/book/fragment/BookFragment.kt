@@ -2,19 +2,23 @@ package sopt.co.kr.millielibraryandroid.ui.book.fragment
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import sopt.co.kr.millielibraryandroid.R
 import sopt.co.kr.millielibraryandroid.api.data.BookInfo
 import sopt.co.kr.millielibraryandroid.databinding.FragmentBookBinding
 import sopt.co.kr.millielibraryandroid.ui.book.CustomDecoration
 import sopt.co.kr.millielibraryandroid.ui.book.adapter.BookListAdapter
+import sopt.co.kr.millielibraryandroid.ui.note.fragment.NoteFragment
 
 class BookFragment : Fragment() {
 
     private lateinit var binding : FragmentBookBinding
+    private val bookListAdapter = BookListAdapter()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,12 +35,15 @@ class BookFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bookListAdapter = BookListAdapter()
         binding.bookRecyclerList.adapter = bookListAdapter
-
         binding.bookRecyclerList.addItemDecoration(CustomDecoration(1f,10f, Color.LTGRAY))
 
+        addBookList()
+        bookListClickEvent()
 
+    }
+
+    private fun addBookList() {
         bookListAdapter.setItems(
             listOf<BookInfo>(
                 BookInfo(
@@ -74,6 +81,22 @@ class BookFragment : Fragment() {
             )
         )
         bookListAdapter.notifyDataSetChanged()
+    }
 
+    private fun bookListClickEvent() {
+        bookListAdapter.setItemClickListener( object : BookListAdapter.ItemClickListener{
+            override fun onClick(view: View, position: Int) {
+                Toast.makeText(requireActivity(), "${bookListAdapter.bookList[position].bookName} 선택하셨습니다.", Toast.LENGTH_LONG).show()
+                val bundle = Bundle()
+                bundle.putString("bookName", bookListAdapter.bookList[position].bookName)
+                bundle.putInt("image", bookListAdapter.bookList[position].image)
+                bundle.putString("bookCount", bookListAdapter.bookList[position].bookContent)
+                bundle.putString("bookDate", bookListAdapter.bookList[position].bookDate)
+                Log.d("test", "${bookListAdapter.bookList[position].bookName} ${bookListAdapter.bookList[position].bookDate}")
+                val noteFragment = NoteFragment()
+                noteFragment.arguments = bundle
+                requireActivity().supportFragmentManager.beginTransaction().replace(R.id.main_fragment_container_view,NoteFragment()).commitNow()
+            }
+        })
     }
 }
