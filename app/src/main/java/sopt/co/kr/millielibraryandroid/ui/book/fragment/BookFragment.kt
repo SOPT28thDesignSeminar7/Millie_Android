@@ -1,5 +1,6 @@
 package sopt.co.kr.millielibraryandroid.ui.book.fragment
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import sopt.co.kr.millielibraryandroid.MyBookActivity
 import sopt.co.kr.millielibraryandroid.R
 import sopt.co.kr.millielibraryandroid.api.data.BookInfo
 import sopt.co.kr.millielibraryandroid.databinding.FragmentBookBinding
@@ -86,7 +88,7 @@ class BookFragment : Fragment() {
     private fun bookListClickEvent() {
         bookListAdapter.setItemClickListener( object : BookListAdapter.ItemClickListener{
             override fun onClick(view: View, position: Int) {
-                Toast.makeText(requireActivity(), "${bookListAdapter.bookList[position].bookName} 선택하셨습니다.", Toast.LENGTH_LONG).show()
+/*                Toast.makeText(requireActivity(), "${bookListAdapter.bookList[position].bookName} 선택하셨습니다.", Toast.LENGTH_LONG).show()
                 val bundle = Bundle()
                 bundle.putString("bookName", bookListAdapter.bookList[position].bookName)
                 bundle.putInt("image", bookListAdapter.bookList[position].image)
@@ -94,7 +96,10 @@ class BookFragment : Fragment() {
                 bundle.putString("bookDate", bookListAdapter.bookList[position].bookDate)
                 val noteFragment = NoteFragment()
                 noteFragment.arguments = bundle
-                requireActivity().supportFragmentManager.beginTransaction().replace(R.id.main_fragment_container_view,noteFragment).commitNow()
+                requireActivity().supportFragmentManager.beginTransaction().replace(R.id.main_fragment_container_view,noteFragment).commitNow()*/
+
+                val intent = Intent(requireContext(),MyBookActivity::class.java)
+                startActivity(intent)
             }
         })
     }
