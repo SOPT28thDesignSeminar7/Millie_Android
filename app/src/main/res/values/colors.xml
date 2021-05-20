@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="tabbar_tabbar_yellow">#f5c243</color>
+    <color name="tabbar_tabbar_gray">#939393</color>
+    <color name="font_main_gray">#555555</color>
+    <color name="font_emphasis">#242424</color>
+    <color name="font_highlight">#504162</color>
+    <color name="font_light_gray">#a5a5a5</color>
 </resources>
