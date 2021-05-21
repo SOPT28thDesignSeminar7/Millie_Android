@@ -4,9 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import sopt.co.kr.millielibraryandroid.databinding.ActivityMybookBinding
-import sopt.co.kr.millielibraryandroid.ui.note.fragment.CardFragment
+import sopt.co.kr.millielibraryandroid.ui.book.fragment.CardFragment
 
 class MyBookActivity : AppCompatActivity() {
     lateinit var binding: ActivityMybookBinding
@@ -30,6 +29,7 @@ class MyBookActivity : AppCompatActivity() {
         transaction.addToBackStack(null)
         transaction.commit()
     }
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId

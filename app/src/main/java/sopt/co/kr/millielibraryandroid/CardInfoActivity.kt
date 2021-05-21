@@ -3,7 +3,7 @@ package sopt.co.kr.millielibraryandroid
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import sopt.co.kr.millielibraryandroid.databinding.ActivityCardInfoBinding
-import sopt.co.kr.millielibraryandroid.ui.note.fragment.CardFragment
+import sopt.co.kr.millielibraryandroid.ui.book.fragment.CardFragment
 
 class CardInfoActivity: AppCompatActivity() {
     private lateinit var binding: ActivityCardInfoBinding
