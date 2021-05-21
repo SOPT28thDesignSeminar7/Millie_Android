@@ -58,4 +58,5 @@ class CardFragment : Fragment(){
         )
         cardAdapter.notifyDataSetChanged()
     }
+
 }

@@ -18,14 +18,11 @@
         android:theme="?attr/actionBarTheme"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:id="@+id/tv_book_tool"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="13dp"
@@ -40,11 +37,11 @@
         tools:text="달러구트 꿈 백화점" />
 
     <TextView
-
         android:id="@+id/tv_book_ex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:text="이 책에 하이라이트한 회원 28199명"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
@@ -96,7 +93,6 @@
     <TextView
         android:id="@+id/tv_num"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="8dp"
@@ -202,7 +198,8 @@
         android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chipGroup"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup">
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
