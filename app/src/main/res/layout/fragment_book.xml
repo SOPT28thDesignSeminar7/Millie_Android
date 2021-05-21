@@ -72,7 +72,7 @@
                     android:textSize="20sp"
                     app:layout_constraintStart_toEndOf="@id/book_user_nickname"
                     app:layout_constraintTop_toTopOf="@id/book_user_profile"
-                    app:layout_constraintBottom_toBottomOf="@id/book_user_nickname"/>
+                    app:layout_constraintBottom_toBottomOf="@id/book_user_nickname" />
 
                 <TextView
                     android:id="@+id/book_following_txt"
@@ -179,7 +179,7 @@
                     android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@id/book_millie_day"
                     app:layout_constraintTop_toTopOf="@id/book_millie_day"
-                    app:layout_constraintBottom_toBottomOf="@id/book_millie_day"/>
+                    app:layout_constraintBottom_toBottomOf="@id/book_millie_day" />
 
                 <TextView
                     android:id="@+id/book_millie_count_text"
@@ -192,7 +192,7 @@
                     android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@id/book_millie_count"
                     app:layout_constraintTop_toTopOf="@id/book_millie_day"
-                    app:layout_constraintBottom_toBottomOf="@id/book_millie_day"/>
+                    app:layout_constraintBottom_toBottomOf="@id/book_millie_day" />
 
                 <ImageView
                     android:id="@+id/book_millie_more"
@@ -234,7 +234,7 @@
                     android:includeFontPadding="false"
                     app:layout_constraintStart_toEndOf="@id/book_description_text"
                     app:layout_constraintTop_toTopOf="@id/book_star"
-                    app:layout_constraintBottom_toBottomOf="@id/book_star"/>
+                    app:layout_constraintBottom_toBottomOf="@id/book_star" />
 
                 <TextView
                     android:id="@+id/book_sub_description_text"

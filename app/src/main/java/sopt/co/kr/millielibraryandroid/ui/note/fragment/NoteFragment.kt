@@ -1,12 +1,11 @@
 package sopt.co.kr.millielibraryandroid.ui.note.fragment
 
-import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import sopt.co.kr.millielibraryandroid.R
 import sopt.co.kr.millielibraryandroid.api.data.CardInfo
 import sopt.co.kr.millielibraryandroid.databinding.FragmentNoteBinding
@@ -14,15 +13,15 @@ import sopt.co.kr.millielibraryandroid.ui.book.adapter.CardAdapter
 
 class NoteFragment : Fragment() {
 
-    private lateinit var binding : FragmentNoteBinding
+    private lateinit var binding: FragmentNoteBinding
 
-    private lateinit var cardAdapter : CardAdapter
+    private lateinit var cardAdapter: CardAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentNoteBinding.inflate(inflater,container,false)
+        binding = FragmentNoteBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -34,7 +33,7 @@ class NoteFragment : Fragment() {
         Log.d("test", "$bookName $bookDate")
         setAdapter()
 
-        binding.noteToolbar.apply{
+        binding.noteToolbar.apply {
             // todo : 예진 파트
             // 나중에 하고 여기 툴바 작업해야죠
             // 인터넷에 tool bar fragment
@@ -43,7 +42,7 @@ class NoteFragment : Fragment() {
         }
     }
 
-    private fun setAdapter(){
+    private fun setAdapter() {
         cardAdapter = CardAdapter()
 
         binding.noteCardList.adapter = cardAdapter
@@ -68,7 +67,6 @@ class NoteFragment : Fragment() {
                 CardInfo(
                     cardImage = R.drawable.and_mybook_card
                 )
-
             )
         )
         cardAdapter.notifyDataSetChanged()

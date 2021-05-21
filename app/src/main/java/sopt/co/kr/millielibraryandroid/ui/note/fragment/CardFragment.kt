@@ -10,17 +10,22 @@ import sopt.co.kr.millielibraryandroid.api.data.CardInfo
 import sopt.co.kr.millielibraryandroid.databinding.FragmentCardBinding
 import sopt.co.kr.millielibraryandroid.ui.book.adapter.CardAdapter
 
-class CardFragment : Fragment(){
+class CardFragment : Fragment() {
     private var _binding: FragmentCardBinding? = null
     private val binding get() = _binding ?: error("View를 참조하기 위해 binding이 초기화되지 않았습니다.")
-    private lateinit var cardAdapter : CardAdapter
+    private lateinit var cardAdapter: CardAdapter
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         _binding = FragmentCardBinding.inflate(
-            inflater,container,false
+            inflater, container, false
         )
         return binding.root
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

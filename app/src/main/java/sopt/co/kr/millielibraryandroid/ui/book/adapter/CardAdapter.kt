@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import sopt.co.kr.millielibraryandroid.api.data.CardInfo
 import sopt.co.kr.millielibraryandroid.databinding.ItemMybookBinding
 
-class CardAdapter : RecyclerView.Adapter<CardAdapter.CardViewHolder>(){
+class CardAdapter : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
     val cardList = mutableListOf<CardInfo>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardAdapter.CardViewHolder {
@@ -26,9 +26,9 @@ class CardAdapter : RecyclerView.Adapter<CardAdapter.CardViewHolder>(){
 
     class CardViewHolder(
         private val binding: ItemMybookBinding
-    ) : RecyclerView.ViewHolder(binding.root){
-        fun onBind(cardInfo: CardInfo){
-            binding.apply{
+    ) : RecyclerView.ViewHolder(binding.root) {
+        fun onBind(cardInfo: CardInfo) {
+            binding.apply {
                 listImage.setImageResource(cardInfo.cardImage)
             }
         }

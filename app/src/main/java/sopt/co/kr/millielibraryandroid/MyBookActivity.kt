@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import sopt.co.kr.millielibraryandroid.databinding.ActivityMybookBinding
 import sopt.co.kr.millielibraryandroid.ui.note.fragment.CardFragment
 
@@ -17,7 +16,7 @@ class MyBookActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val toolbar = binding.toolbar
-        binding.toolbar.apply{
+        binding.toolbar.apply {
             setSupportActionBar(toolbar)
             supportActionBar?.setHomeAsUpIndicator(R.drawable.property_1_book_back_active)
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -26,14 +25,14 @@ class MyBookActivity : AppCompatActivity() {
         val cardFragment = CardFragment()
         val manager = supportFragmentManager
         val transaction = manager.beginTransaction()
-        transaction.replace(R.id.fragment_container,cardFragment)
+        transaction.replace(R.id.fragment_container, cardFragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
-        when(id) {
+        when (id) {
             android.R.id.home -> {
                 val intent = Intent(this@MyBookActivity, MainActivity::class.java)
                 startActivity(intent)
