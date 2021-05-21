@@ -10,6 +10,7 @@ import sopt.co.kr.millielibraryandroid.R
 import sopt.co.kr.millielibraryandroid.api.data.CardInfo
 import sopt.co.kr.millielibraryandroid.databinding.FragmentNoteBinding
 import sopt.co.kr.millielibraryandroid.ui.book.adapter.CardAdapter
+import sopt.co.kr.millielibraryandroid.ui.book.fragment.BookFragment
 
 class NoteFragment : Fragment() {
 
@@ -33,7 +34,16 @@ class NoteFragment : Fragment() {
         Log.d("test", "$bookName $bookDate")
         setAdapter()
 
+        arguments?.getInt("image")?.let { binding.ivBook.setImageResource(it) }
+        binding.tvBookTool.text = bookName
+
+        val bookFragment = BookFragment()
         binding.noteToolbar.apply {
+            setNavigationIcon(R.drawable.property_1_book_back_active)
+            setNavigationOnClickListener{
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.main_fragment_container_view, bookFragment).commitNow()
+            }
             // todo : 예진 파트
             // 나중에 하고 여기 툴바 작업해야죠
             // 인터넷에 tool bar fragment
