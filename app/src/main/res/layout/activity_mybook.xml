@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -17,15 +16,11 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-    </androidx.appcompat.widget.Toolbar>
+        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:id="@+id/tv_book_tool"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="13dp"
@@ -40,11 +35,11 @@
         tools:text="달러구트 꿈 백화점" />
 
     <TextView
-
         android:id="@+id/tv_book_ex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:text="이 책에 하이라이트한 회원 28199명"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
@@ -96,7 +91,6 @@
     <TextView
         android:id="@+id/tv_num"
         android:layout_width="wrap_content"
-
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="8dp"

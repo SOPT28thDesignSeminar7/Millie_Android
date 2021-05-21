@@ -25,13 +25,14 @@ class BookListAdapter : RecyclerView.Adapter<BookListAdapter.BookListViewHolder>
         parent: ViewGroup,
         viewType: Int
     ): BookListAdapter.BookListViewHolder {
-        val binding = ItemBookListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            ItemBookListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return BookListViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: BookListAdapter.BookListViewHolder, position: Int) {
         holder.onBind(bookList[position])
-        holder.itemView.setOnClickListener{
+        holder.itemView.setOnClickListener {
             itemClickListener.onClick(it, position)
 
         }

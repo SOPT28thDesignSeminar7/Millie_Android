@@ -16,7 +16,7 @@ class MyBookActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val toolbar = binding.toolbar
-        binding.toolbar.apply{
+        binding.toolbar.apply {
             setSupportActionBar(toolbar)
             supportActionBar?.setHomeAsUpIndicator(R.drawable.property_1_book_back_active)
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -25,7 +25,7 @@ class MyBookActivity : AppCompatActivity() {
         val cardFragment = CardFragment()
         val manager = supportFragmentManager
         val transaction = manager.beginTransaction()
-        transaction.replace(R.id.fragment_container,cardFragment)
+        transaction.replace(R.id.fragment_container, cardFragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }
@@ -33,7 +33,7 @@ class MyBookActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
-        when(id) {
+        when (id) {
             android.R.id.home -> {
                 val intent = Intent(this@MyBookActivity, MainActivity::class.java)
                 startActivity(intent)

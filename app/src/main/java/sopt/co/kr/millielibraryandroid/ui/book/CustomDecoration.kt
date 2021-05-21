@@ -9,12 +9,14 @@ class CustomDecoration(
     private val height: Float,
     private val padding: Float,
     @ColorInt private val color: Int
-    ) : RecyclerView.ItemDecoration() {
+) : RecyclerView.ItemDecoration() {
 
     private val paint = Paint()
+
     init {
         paint.color = color
     }
+
     override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         val left = parent.paddingStart + padding
         val right = parent.width - parent.paddingEnd - padding
@@ -28,4 +30,4 @@ class CustomDecoration(
             c.drawRect(left, top, right, bottom, paint)
         }
     }
-    }
+}
