@@ -1,18 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/note_toolbar"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:background="?attr/colorOnPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.Toolbar>
+
     <TextView
-        android:id="@+id/textview"
+        android:id="@+id/tv_book_tool"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hi"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="13dp"
+        android:letterSpacing="-0.02"
+        android:textColor="@color/font_emphasis"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        tools:text="달러구트 꿈 백화점" />
+
+    <TextView
+        android:id="@+id/tv_book_ex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="이 책에 하이라이트한 회원 28199명"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="이 책에 하이라이트한 회원 28199명" />
+
+    <ImageView
+        android:id="@+id/iv_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_book_ex"
+        app:srcCompat="@drawable/img_book_2" />
+
+    <ImageView
+        android:id="@+id/iv_back1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="115dp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_book"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/ic_back" />
+
+    <ImageView
+        android:id="@+id/iv_back2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="115dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/iv_book"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:srcCompat="@drawable/ic_back_2" />
+
+    <ImageView
+        android:id="@+id/iv_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_book"
+        app:srcCompat="@drawable/prop_ic_like" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:letterSpacing="-0.02"
+        android:textColor="@color/font_emphasis"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_like"
+        tools:text="26" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="15dp"
+        android:letterSpacing="-0.02"
+        android:textColor="@color/font_emphasis"
+        android:textSize="13sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/tv_num"
+        app:layout_constraintTop_toBottomOf="@+id/iv_like"
+        tools:text="개의 하이라이트" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="360dp"
+        android:layout_height="1px"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_num" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line">
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.02"
+            android:text="전체"
+            android:textColor="#000000"
+            android:textSize="10sp"
+            android:textStyle="normal" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipYellow"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            app:chipBackgroundColor="#feda52" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPink"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            app:chipBackgroundColor="#ff847d" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipGreen"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            app:chipBackgroundColor="#dafe78" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipBlue"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            app:chipBackgroundColor="#7adbff" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipPurple"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            app:chipBackgroundColor="#b98efd" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipGrey"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            app:chipBackgroundColor="#c4c4c4" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/note_card_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chipGroup"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

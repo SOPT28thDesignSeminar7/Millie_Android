@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import sopt.co.kr.millielibraryandroid.databinding.ActivityCardInfoBinding
 import sopt.co.kr.millielibraryandroid.ui.note.fragment.CardFragment
 
-class CardInfoActivity: AppCompatActivity() {
+class CardInfoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCardInfoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +15,7 @@ class CardInfoActivity: AppCompatActivity() {
         val cardFragment = CardFragment()
 
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.add(R.id.card_info_fragment,cardFragment)
+        transaction.add(R.id.card_info_fragment, cardFragment)
         transaction.commit()
     }
 }
