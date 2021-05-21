@@ -44,11 +44,6 @@ class NoteFragment : Fragment() {
                 requireActivity().supportFragmentManager.beginTransaction()
                     .replace(R.id.main_fragment_container_view, bookFragment).commitNow()
             }
-            // todo : 예진 파트
-            // 나중에 하고 여기 툴바 작업해야죠
-            // 인터넷에 tool bar fragment
-            // 앱잼해야되잖아 아니야?
-            // 구조잡는법을 많이 해보는게 좋을거같아요!!
         }
     }
 
