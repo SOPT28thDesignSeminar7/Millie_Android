@@ -55,22 +55,40 @@ class NoteFragment : Fragment() {
         cardAdapter.cardList.addAll(
             listOf<CardInfo>(
                 CardInfo(
-                    cardImage = R.drawable.and_mybook_card
+                    cardTitle = "숨 가쁘게 이어지는 직선 같은 삶에, 신께서 공들여 그려 넣은 쉼표인 것 같아요!",
+                    cardDate = "2021-02-05",
+                    cardTime = "21:41:18",
+                    cardBtn = R.drawable.btn_more
                 ),
                 CardInfo(
-                    cardImage = R.drawable.and_mybook_card
+                    cardTitle = "숨 가쁘게 이어지는 직선 같은 삶에, 신께서 공들여 그려 넣은 쉼표인 것 같아요!",
+                    cardDate = "2021-02-05",
+                    cardTime = "21:41:18",
+                    cardBtn = R.drawable.btn_more
                 ),
                 CardInfo(
-                    cardImage = R.drawable.and_mybook_card
+                    cardTitle = "숨 가쁘게 이어지는 직선 같은 삶에, 신께서 공들여 그려 넣은 쉼표인 것 같아요!",
+                    cardDate = "2021-02-05",
+                    cardTime = "21:41:18",
+                    cardBtn = R.drawable.btn_more
                 ),
                 CardInfo(
-                    cardImage = R.drawable.and_mybook_card
+                    cardTitle = "숨 가쁘게 이어지는 직선 같은 삶에, 신께서 공들여 그려 넣은 쉼표인 것 같아요!",
+                    cardDate = "2021-02-05",
+                    cardTime = "21:41:18",
+                    cardBtn = R.drawable.btn_more
                 ),
                 CardInfo(
-                    cardImage = R.drawable.and_mybook_card
+                    cardTitle = "숨 가쁘게 이어지는 직선 같은 삶에, 신께서 공들여 그려 넣은 쉼표인 것 같아요!",
+                    cardDate = "2021-02-05",
+                    cardTime = "21:41:18",
+                    cardBtn = R.drawable.btn_more
                 ),
                 CardInfo(
-                    cardImage = R.drawable.and_mybook_card
+                    cardTitle = "숨 가쁘게 이어지는 직선 같은 삶에, 신께서 공들여 그려 넣은 쉼표인 것 같아요!",
+                    cardDate = "2021-02-05",
+                    cardTime = "21:41:18",
+                    cardBtn = R.drawable.btn_more
                 )
             )
         )

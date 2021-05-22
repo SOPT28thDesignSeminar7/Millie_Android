@@ -29,7 +29,10 @@ class CardAdapter : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
     ) : RecyclerView.ViewHolder(binding.root) {
         fun onBind(cardInfo: CardInfo) {
             binding.apply {
-                listImage.setImageResource(cardInfo.cardImage)
+                tvTitle.text = cardInfo.cardTitle
+                tvDate.text = cardInfo.cardDate
+                tvTime.text = cardInfo.cardTime
+                ivBtnMore.setImageResource(cardInfo.cardBtn)
             }
         }
     }
