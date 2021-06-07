@@ -14,7 +14,6 @@ import sopt.co.kr.millielibraryandroid.databinding.ItemBookListBinding
 class BookListAdapter : RecyclerView.Adapter<BookListAdapter.BookListViewHolder>() {
 
     val bookList = mutableListOf<BookInfo>()
-    lateinit var highLight: HighLight
 
     interface ItemClickListener {
         fun onClick(view: View, position: Int)
@@ -60,11 +59,9 @@ class BookListAdapter : RecyclerView.Adapter<BookListAdapter.BookListViewHolder>
             binding.apply {
                 tvBookName.text = bookInfo.bookName
                 tvBookWriter.text = bookInfo.bookWriter
-                tvHighLightNumber.setText(bookInfo.highLightNumber)
-
-//                ?????
-                tvBookContent.text = bookInfo.hightlights.
-                tvBookDate.text = bookInfo.hightlights.
+                tvHighLightNumber.text = bookInfo.highLightNumber.toString()
+                tvBookContent.text = bookInfo.hightlights[0].highlightText
+                tvBookDate.text = bookInfo.hightlights[0].highlightDate
             }
         }
     }

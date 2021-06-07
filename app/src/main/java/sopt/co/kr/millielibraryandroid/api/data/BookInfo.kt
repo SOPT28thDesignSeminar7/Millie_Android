@@ -13,5 +13,5 @@ data class BookInfo(
 
 data class HighLight(
     @SerializedName("highlightDate") val highlightDate: String,
-    @SerializedName("hightlightText") val highlightText: String
+    @SerializedName("highlightText") val highlightText: String
 )

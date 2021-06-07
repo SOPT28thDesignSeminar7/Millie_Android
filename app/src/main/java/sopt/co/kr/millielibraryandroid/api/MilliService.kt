@@ -7,5 +7,5 @@ import sopt.co.kr.millielibraryandroid.api.data.ResponseBookData
 
 interface MilliService {
     @GET("api/books")
-    fun getBookList(): Call<List<BookInfo>>
+    fun getBookList(): Call<ResponseBookData>
 }
