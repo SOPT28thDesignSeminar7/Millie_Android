@@ -2,15 +2,10 @@ package sopt.co.kr.millielibraryandroid.api.data
 
 data class ResponseBookData(
     val status: Int,
-    val data: BookInfo?
+    val data: BookList?
 ) {
-    data class BookInfo(
-        val image: Int,
-        val bookName: String,
-        val bookWriter: String,
-        val highLightNumber: String,
-        val bookContent: String,
-        val bookDate: String
+    data class BookList(
+        val books: ArrayList<BookInfo>
     )
 }
 
