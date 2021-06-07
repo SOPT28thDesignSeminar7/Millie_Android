@@ -4,12 +4,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import sopt.co.kr.millielibraryandroid.api.data.BookInfo
+import sopt.co.kr.millielibraryandroid.api.data.ResponseBookData
 import sopt.co.kr.millielibraryandroid.databinding.ItemBookListBinding
 
 class BookListAdapter : RecyclerView.Adapter<BookListAdapter.BookListViewHolder>() {
 
-    val bookList = mutableListOf<BookInfo>()
+    val bookList = mutableListOf<ResponseBookData.BookInfo>()
 
     interface ItemClickListener {
         fun onClick(view: View, position: Int)
@@ -40,7 +40,7 @@ class BookListAdapter : RecyclerView.Adapter<BookListAdapter.BookListViewHolder>
 
     override fun getItemCount(): Int = bookList.size
 
-    fun setItems(newItems: List<BookInfo>) {
+    fun setItems(newItems: List<ResponseBookData.BookInfo>) {
         bookList.clear()
         bookList.addAll(newItems)
         notifyDataSetChanged()
@@ -50,7 +50,7 @@ class BookListAdapter : RecyclerView.Adapter<BookListAdapter.BookListViewHolder>
     class BookListViewHolder(
         private val binding: ItemBookListBinding
     ) : RecyclerView.ViewHolder(binding.root) {
-        fun onBind(bookInfo: BookInfo) {
+        fun onBind(bookInfo: ResponseBookData.BookInfo) {
             binding.apply {
                 ivBookPoster.setImageResource(bookInfo.image)
                 tvBookName.text = bookInfo.bookName
