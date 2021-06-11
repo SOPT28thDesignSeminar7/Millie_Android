@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/note_fragment_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -130,71 +131,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_num" />
 
-    <com.google.android.material.chip.ChipGroup
+    <LinearLayout
         android:id="@+id/chipGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/line">
 
-        <com.google.android.material.chip.Chip
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:letterSpacing="-0.02"
-            android:text="전체"
-            android:fontFamily="@font/notosansmonocjkkr_regular"
-            android:includeFontPadding="false"
-            android:textColor="#000000"
-            android:textSize="10sp"
-            android:textStyle="normal" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipYellow"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="60dp"
-            android:layout_height="45dp"
-            app:chipBackgroundColor="#feda52" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipPink"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="60dp"
-            android:layout_height="45dp"
-            app:chipBackgroundColor="#ff847d" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipGreen"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="60dp"
-            android:layout_height="45dp"
-            app:chipBackgroundColor="#dafe78" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipBlue"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="60dp"
-            android:layout_height="45dp"
-            app:chipBackgroundColor="#7adbff" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipPurple"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="60dp"
-            android:layout_height="45dp"
-            app:chipBackgroundColor="#b98efd" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/chipGrey"
-            style="@style/Widget.MaterialComponents.Chip.Choice"
-            android:layout_width="60dp"
-            android:layout_height="45dp"
-            app:chipBackgroundColor="#c4c4c4" />
-    </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/note_card_list"
