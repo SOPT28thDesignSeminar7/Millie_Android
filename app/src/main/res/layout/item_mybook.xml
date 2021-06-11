@@ -44,34 +44,14 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/lato_regular"
                 android:letterSpacing="-0.06"
-                android:text="2021-02-05"
+                android:text="2021-02-05   21:41:18"
                 android:textColor="@color/font_light_gray"
                 android:textSize="15sp"
                 android:textStyle="normal"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_title"/>
 
-            <TextView
-                android:id="@+id/tv_time"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/lato_regular"
-                android:textStyle="normal"
-                android:textSize="15sp"
-                android:textColor="@color/font_light_gray"
-                android:letterSpacing="-0.06"
-                android:text="21:41:18"
-                android:layout_marginStart="10dp"
-                app:layout_constraintStart_toEndOf="@id/tv_date"
-                app:layout_constraintTop_toTopOf="@id/tv_date"/>
 
-            <ImageView
-                android:id="@+id/iv_btn_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/btn_more"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_title"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

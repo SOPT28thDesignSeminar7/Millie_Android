@@ -2,7 +2,6 @@ package sopt.co.kr.millielibraryandroid.ui.book.fragment
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,11 +9,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import sopt.co.kr.millielibraryandroid.R
 import sopt.co.kr.millielibraryandroid.api.ServiceCreator
-import sopt.co.kr.millielibraryandroid.api.data.BookInfo
 import sopt.co.kr.millielibraryandroid.databinding.FragmentBookBinding
 import sopt.co.kr.millielibraryandroid.ui.book.CustomDecoration
 import sopt.co.kr.millielibraryandroid.ui.book.adapter.BookListAdapter
-import sopt.co.kr.millielibraryandroid.ui.note.fragment.NoteFragment
 import sopt.co.kr.millielibraryandroid.util.enqueueUtil
 
 class BookFragment : Fragment() {
