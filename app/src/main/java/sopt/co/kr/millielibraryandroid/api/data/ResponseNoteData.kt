@@ -2,9 +2,6 @@ package sopt.co.kr.millielibraryandroid.api.data
 
 data class ResponseNoteData(
     val status: Int,
-    val data: NoteList
+    val data: CardInfo
 ) {
-    data class NoteList(
-        val books: ArrayList<CardInfo>
-    )
 }

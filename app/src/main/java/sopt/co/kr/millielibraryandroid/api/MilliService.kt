@@ -10,8 +10,10 @@ interface MilliService {
     @GET("api/books")
     fun getBookList(): Call<ResponseBookData>
 
-    @GET("api/highlights/:id")
+    // path {id}
+    // Query id?= ~~~
+    @GET("api/highlights/{id}")
     fun getNoteList(
-        @Path("id") bookId :Int
-    ) : Call<ResponseNoteData>
+        @Path("id") dbKeyValue: String
+    ): Call<ResponseNoteData>
 }

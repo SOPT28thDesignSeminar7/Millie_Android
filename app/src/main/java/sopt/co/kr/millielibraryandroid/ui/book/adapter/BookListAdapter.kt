@@ -7,8 +7,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import sopt.co.kr.millielibraryandroid.api.data.BookInfo
-import sopt.co.kr.millielibraryandroid.api.data.HighLight
-import sopt.co.kr.millielibraryandroid.api.data.ResponseBookData
 import sopt.co.kr.millielibraryandroid.databinding.ItemBookListBinding
 
 class BookListAdapter : RecyclerView.Adapter<BookListAdapter.BookListViewHolder>() {
