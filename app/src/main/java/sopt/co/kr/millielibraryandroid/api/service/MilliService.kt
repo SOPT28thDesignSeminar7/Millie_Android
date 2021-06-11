@@ -1,4 +1,4 @@
-package sopt.co.kr.millielibraryandroid.api
+package sopt.co.kr.millielibraryandroid.api.service
 
 import retrofit2.Call
 import retrofit2.http.GET

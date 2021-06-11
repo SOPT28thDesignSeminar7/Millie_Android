@@ -1,4 +1,4 @@
-package sopt.co.kr.millielibraryandroid.ui.book.adapter
+package sopt.co.kr.millielibraryandroid.ui.note.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -11,7 +11,7 @@ import sopt.co.kr.millielibraryandroid.databinding.ItemMybookBinding
 class CardAdapter : RecyclerView.Adapter<CardAdapter.CardViewHolder>() {
     val cardList = mutableListOf<HighLights>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardAdapter.CardViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
         val binding = ItemMybookBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,

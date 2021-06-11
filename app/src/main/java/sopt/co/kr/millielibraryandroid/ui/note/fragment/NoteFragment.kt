@@ -1,4 +1,4 @@
-package sopt.co.kr.millielibraryandroid.ui.book.fragment
+package sopt.co.kr.millielibraryandroid.ui.note.fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -11,10 +11,11 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import sopt.co.kr.millielibraryandroid.R
-import sopt.co.kr.millielibraryandroid.api.ServiceCreator
+import sopt.co.kr.millielibraryandroid.api.retrofit.ServiceCreator
 import sopt.co.kr.millielibraryandroid.api.data.ResponseNoteData
 import sopt.co.kr.millielibraryandroid.databinding.FragmentNoteBinding
-import sopt.co.kr.millielibraryandroid.ui.book.adapter.CardAdapter
+import sopt.co.kr.millielibraryandroid.ui.note.adapter.CardAdapter
+import sopt.co.kr.millielibraryandroid.ui.book.fragment.BookFragment
 import sopt.co.kr.millielibraryandroid.util.addChip
 import sopt.co.kr.millielibraryandroid.util.dpToPixel
 

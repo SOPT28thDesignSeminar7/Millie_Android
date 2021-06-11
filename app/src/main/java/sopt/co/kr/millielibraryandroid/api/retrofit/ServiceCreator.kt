@@ -1,7 +1,8 @@
-package sopt.co.kr.millielibraryandroid.api
+package sopt.co.kr.millielibraryandroid.api.retrofit
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import sopt.co.kr.millielibraryandroid.api.service.MilliService
 
 object ServiceCreator {
     private const val BASE_URL = "http://3.36.64.41:5000/"
